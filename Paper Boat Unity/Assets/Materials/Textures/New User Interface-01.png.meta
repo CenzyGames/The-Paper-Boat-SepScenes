@@ -1,0 +1,597 @@
+fileFormatVersion: 2
+guid: bc477672e95f1fd4da7f9f3ae520526b
+timeCreated: 1459422007
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: New User Interface-01_0
+    21300002: New User Interface-01_1
+    21300004: New User Interface-01_2
+    21300006: New User Interface-01_3
+    21300008: New User Interface-01_4
+    21300010: New User Interface-01_5
+    21300012: New User Interface-01_6
+    21300014: New User Interface-01_7
+    21300016: New User Interface-01_8
+    21300018: New User Interface-01_9
+    21300020: New User Interface-01_11
+    21300022: New User Interface-01_12
+    21300024: New User Interface-01_13
+    21300026: New User Interface-01_16
+    21300028: New User Interface-01_10
+    21300030: New User Interface-01_14
+    21300032: New User Interface-01_15
+    21300034: New User Interface-01_17
+    21300036: New User Interface-01_18
+    21300038: New User Interface-01_19
+    21300040: New User Interface-01_20
+    21300042: New User Interface-01_21
+    21300044: New User Interface-01_22
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: New User Interface-01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 716
+        width: 310
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 95, y: -134}
+        - {x: 126, y: -95}
+        - {x: 145, y: -74}
+        - {x: 155, y: -58}
+        - {x: 155, y: 81}
+        - {x: 151, y: 80}
+        - {x: 151, y: 55}
+        - {x: 142, y: 78}
+        - {x: 134, y: 95}
+        - {x: 125, y: 108}
+        - {x: 121, y: 114}
+        - {x: 95, y: 137}
+        - {x: 83, y: 145}
+        - {x: 62, y: 154}
+        - {x: -71, y: 154}
+        - {x: -77, y: 151}
+        - {x: -117, y: 127}
+        - {x: -129, y: 113}
+        - {x: -148, y: 79}
+        - {x: -155, y: 65}
+        - {x: -155, y: -64}
+        - {x: -150, y: -75}
+        - {x: -126, y: -109}
+        - {x: -118, y: -119}
+        - {x: -102, y: -134}
+        - {x: -98, y: -137}
+        - {x: -81, y: -149}
+        - {x: -69, y: -154}
+        - {x: 64, y: -154}
+        - {x: 69, y: -152}
+        - {x: 76, y: -149}
+        - {x: 84, y: -144}
+    - name: New User Interface-01_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 802
+        width: 153
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.5, y: 82}
+        - {x: -76.5, y: 82}
+        - {x: -76.5, y: -82}
+        - {x: 14.5, y: -82}
+        - {x: 76.5, y: -40}
+        - {x: 76.5, y: 70}
+        - {x: 72.5, y: 78}
+    - name: New User Interface-01_2
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 787
+        width: 182
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67, y: 95}
+        - {x: -70, y: 95}
+        - {x: -91, y: 70}
+        - {x: -91, y: -26}
+        - {x: -89, y: -28}
+        - {x: -71, y: -85}
+        - {x: -63, y: -95}
+        - {x: 60, y: -95}
+        - {x: 72, y: -86}
+        - {x: 91, y: -26}
+        - {x: 91, y: 68}
+    - name: New User Interface-01_3
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 773
+        width: 160
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 85.5}
+        - {x: 38, y: 98.5}
+        - {x: -29, y: 98.5}
+        - {x: -38, y: 95.5}
+        - {x: -80, y: 80.5}
+        - {x: -80, y: -84.5}
+        - {x: -62, y: -98.5}
+        - {x: 61, y: -98.5}
+        - {x: 70, y: -91.5}
+        - {x: 80, y: -81.5}
+        - {x: 80, y: 63.5}
+    - name: New User Interface-01_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 568
+        width: 188
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -88, y: 55}
+        - {x: -94, y: 49}
+        - {x: -94, y: -27}
+        - {x: -72, y: -55}
+        - {x: 68, y: -55}
+        - {x: 94, y: -24}
+        - {x: 94, y: 55}
+    - name: New User Interface-01_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 578
+        width: 121
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60.5, y: 64}
+        - {x: -60.5, y: -64}
+        - {x: 60.5, y: -64}
+        - {x: 60.5, y: 64}
+    - name: New User Interface-01_6
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 571
+        width: 190
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 86}
+        - {x: -85, y: 59}
+        - {x: -95, y: 43}
+        - {x: -95, y: -16}
+        - {x: -90, y: -66}
+        - {x: -87, y: -77}
+        - {x: -80, y: -86}
+        - {x: 86, y: -86}
+        - {x: 95, y: -74}
+        - {x: 95, y: 71}
+        - {x: 90, y: 86}
+    - name: New User Interface-01_7
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 570
+        width: 178
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74, y: 76.5}
+        - {x: 38, y: 82.5}
+        - {x: -86, y: 82.5}
+        - {x: -89, y: 78.5}
+        - {x: -89, y: 26.5}
+        - {x: -63, y: -72.5}
+        - {x: -58, y: -82.5}
+        - {x: 84, y: -82.5}
+        - {x: 88, y: -61.5}
+        - {x: 89, y: -48.5}
+        - {x: 89, y: 66.5}
+    - name: New User Interface-01_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 411
+        width: 185
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67.5, y: 65}
+        - {x: -88.5, y: 65}
+        - {x: -92.5, y: 63}
+        - {x: -92.5, y: -64}
+        - {x: -85.5, y: -65}
+        - {x: 88.5, y: -65}
+        - {x: 92.5, y: -55}
+        - {x: 92.5, y: 44}
+        - {x: 71.5, y: 55}
+    - name: New User Interface-01_9
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 403
+        width: 191
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.5, y: 70.5}
+        - {x: -51.5, y: 70.5}
+        - {x: -94.5, y: 60.5}
+        - {x: -95.5, y: 50.5}
+        - {x: -95.5, y: -49.5}
+        - {x: -52.5, y: -70.5}
+        - {x: 80.5, y: -70.5}
+        - {x: 95.5, y: -57.5}
+        - {x: 95.5, y: 55.5}
+        - {x: 76.5, y: 68.5}
+    - name: New User Interface-01_11
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 400
+        width: 202
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 70.5}
+        - {x: 68, y: 79.5}
+        - {x: 4, y: 79.5}
+        - {x: -72, y: 59.5}
+        - {x: -101, y: 39.5}
+        - {x: -101, y: -56.5}
+        - {x: -48, y: -79.5}
+        - {x: 78, y: -79.5}
+        - {x: 92, y: -57.5}
+        - {x: 98, y: -27.5}
+        - {x: 98, y: 24.5}
+      - - {x: -30, y: 79.5}
+        - {x: -29, y: 76.5}
+        - {x: 11, y: 76.5}
+        - {x: 13, y: 78.5}
+        - {x: 13, y: 79.5}
+    - name: New User Interface-01_12
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 396
+        width: 150
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34, y: 75.5}
+        - {x: -70, y: 29.5}
+        - {x: -75, y: 14.5}
+        - {x: -75, y: -31.5}
+        - {x: -28, y: -75.5}
+        - {x: 75, y: -75.5}
+        - {x: 75, y: 74.5}
+        - {x: 68, y: 75.5}
+    - name: New User Interface-01_13
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 210
+        width: 187
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60.5, y: 93.5}
+        - {x: -41.5, y: 93.5}
+        - {x: -63.5, y: 80.5}
+        - {x: -93.5, y: 37.5}
+        - {x: -93.5, y: -57.5}
+        - {x: -45.5, y: -93.5}
+        - {x: 38.5, y: -93.5}
+        - {x: 47.5, y: -90.5}
+        - {x: 74.5, y: -68.5}
+        - {x: 93.5, y: -31.5}
+        - {x: 93.5, y: 39.5}
+    - name: New User Interface-01_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 210
+        width: 185
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86.5, y: 80.5}
+        - {x: 50.5, y: 92.5}
+        - {x: -32.5, y: 92.5}
+        - {x: -69.5, y: 78.5}
+        - {x: -92.5, y: 35.5}
+        - {x: -92.5, y: -33.5}
+        - {x: -61.5, y: -88.5}
+        - {x: -42.5, y: -92.5}
+        - {x: 35.5, y: -92.5}
+        - {x: 78.5, y: -62.5}
+        - {x: 92.5, y: -49.5}
+        - {x: 92.5, y: 55.5}
+    - name: New User Interface-01_14
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 211
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92, y: 58}
+        - {x: -92, y: -36}
+        - {x: -84, y: -69}
+        - {x: -58, y: -77}
+        - {x: -49, y: -83}
+        - {x: -31, y: -92}
+        - {x: 49, y: -92}
+        - {x: 92, y: -44}
+        - {x: 92, y: 92}
+        - {x: -58, y: 92}
+    - name: New User Interface-01_15
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 776
+        width: 205
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69.5, y: 90.5}
+        - {x: -25.5, y: 90.5}
+        - {x: -50.5, y: 85.5}
+        - {x: -68.5, y: 67.5}
+        - {x: -102.5, y: 51.5}
+        - {x: -102.5, y: -26.5}
+        - {x: -55.5, y: -94.5}
+        - {x: -39.5, y: -95.5}
+        - {x: 69.5, y: -95.5}
+        - {x: 92.5, y: -86.5}
+        - {x: 102.5, y: -66.5}
+        - {x: 102.5, y: 70.5}
+      - - {x: -102.5, y: -73.5}
+        - {x: -99.5, y: -72.5}
+        - {x: -99.5, y: -52.5}
+        - {x: -101.5, y: -50.5}
+        - {x: -102.5, y: -50.5}
+    - name: New User Interface-01_16
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 574
+        width: 209
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 92.5, y: 83}
+        - {x: -48.5, y: 83}
+        - {x: -58.5, y: 75}
+        - {x: -104.5, y: 42}
+        - {x: -104.5, y: -26}
+        - {x: -82.5, y: -51}
+        - {x: -48.5, y: -80}
+        - {x: -44.5, y: -83}
+        - {x: 93.5, y: -83}
+        - {x: 104.5, y: -68}
+        - {x: 104.5, y: 70}
+        - {x: 100.5, y: 76}
+    - name: New User Interface-01_17
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 215
+        width: 181
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86.5, y: 90.5}
+        - {x: -40.5, y: 90.5}
+        - {x: -89.5, y: 51.5}
+        - {x: -90.5, y: 41.5}
+        - {x: -90.5, y: -36.5}
+        - {x: -68.5, y: -73.5}
+        - {x: -33.5, y: -90.5}
+        - {x: 35.5, y: -90.5}
+        - {x: 62.5, y: -84.5}
+        - {x: 90.5, y: -38.5}
+        - {x: 90.5, y: 58.5}
+    - name: New User Interface-01_18
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 211
+        width: 185
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.5, y: 92}
+        - {x: -32.5, y: 92}
+        - {x: -51.5, y: 88}
+        - {x: -92.5, y: 41}
+        - {x: -92.5, y: -45}
+        - {x: -53.5, y: -92}
+        - {x: 42.5, y: -92}
+        - {x: 92.5, y: -52}
+        - {x: 92.5, y: 37}
+        - {x: 67.5, y: 78}
+    - name: New User Interface-01_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 7
+        width: 189
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35.5, y: 94.5}
+        - {x: -35.5, y: 94.5}
+        - {x: -82.5, y: 65.5}
+        - {x: -94.5, y: 42.5}
+        - {x: -94.5, y: -42.5}
+        - {x: -92.5, y: -53.5}
+        - {x: -48.5, y: -94.5}
+        - {x: 49.5, y: -94.5}
+        - {x: 75.5, y: -90.5}
+        - {x: 94.5, y: -45.5}
+        - {x: 94.5, y: 35.5}
+        - {x: 81.5, y: 66.5}
+    - name: New User Interface-01_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 11
+        width: 185
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.5, y: 92.5}
+        - {x: -39.5, y: 92.5}
+        - {x: -54.5, y: 89.5}
+        - {x: -66.5, y: 73.5}
+        - {x: -92.5, y: 36.5}
+        - {x: -92.5, y: -37.5}
+        - {x: -65.5, y: -81.5}
+        - {x: -49.5, y: -92.5}
+        - {x: 50.5, y: -92.5}
+        - {x: 85.5, y: -84.5}
+        - {x: 92.5, y: -45.5}
+        - {x: 92.5, y: 36.5}
+        - {x: 67.5, y: 78.5}
+    - name: New User Interface-01_21
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 75
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 44}
+        - {x: -18, y: 44}
+        - {x: -42, y: 36}
+        - {x: -44, y: 26}
+        - {x: -44, y: -26}
+        - {x: -25, y: -44}
+        - {x: 28, y: -44}
+        - {x: 43, y: -38}
+        - {x: 44, y: -29}
+        - {x: 44, y: 21}
+        - {x: 27, y: 41}
+    - name: New User Interface-01_22
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 47
+        width: 134
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 64.5}
+        - {x: -67, y: 62.5}
+        - {x: -67, y: -43.5}
+        - {x: -52, y: -64.5}
+        - {x: 49, y: -64.5}
+        - {x: 67, y: -60.5}
+        - {x: 67, y: 54.5}
+        - {x: 62, y: 64.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
