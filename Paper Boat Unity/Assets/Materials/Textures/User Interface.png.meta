@@ -37,7 +37,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -62,12 +62,17 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 256
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
     sprites:
     - name: User Interface_0
@@ -80,6 +85,15 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -359, y: 299}
+        - {x: -428, y: 151}
+        - {x: -428, y: 0}
+        - {x: -408, y: 0}
+        - {x: 0, y: 407}
+        - {x: 0, y: 427}
+        - {x: -139, y: 427}
+        - {x: -247, y: 412}
     - name: User Interface_1
       rect:
         serializedVersion: 2
@@ -90,6 +104,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -274, y: 210}
+        - {x: -274, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 210}
     - name: User Interface_2
       rect:
         serializedVersion: 2
@@ -100,6 +119,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -274, y: 210}
+        - {x: -274, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 210}
     - name: User Interface_3
       rect:
         serializedVersion: 2
@@ -110,6 +134,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -274, y: 210}
+        - {x: -274, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 210}
     - name: User Interface_4
       rect:
         serializedVersion: 2
@@ -120,6 +149,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -274, y: 210}
+        - {x: -274, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 210}
     - name: User Interface_5
       rect:
         serializedVersion: 2
@@ -130,6 +164,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -331, y: 254}
+        - {x: -331, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 254}
     - name: User Interface_6
       rect:
         serializedVersion: 2
@@ -140,6 +179,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -274, y: 210}
+        - {x: -274, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 210}
     - name: User Interface_7
       rect:
         serializedVersion: 2
@@ -150,6 +194,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -274, y: 210}
+        - {x: -274, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 210}
     - name: User Interface_8
       rect:
         serializedVersion: 2
@@ -160,6 +209,11 @@ TextureImporter:
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -329, y: 251}
+        - {x: -329, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: 251}
     - name: slip single
       rect:
         serializedVersion: 2
@@ -168,8 +222,13 @@ TextureImporter:
         width: 78
         height: 93
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 46.5}
+        - {x: -39, y: -46.5}
+        - {x: 39, y: -46.5}
+        - {x: 39, y: 46.5}
     - name: slips icon
       rect:
         serializedVersion: 2
@@ -178,8 +237,15 @@ TextureImporter:
         width: 112
         height: 116
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: 58}
+        - {x: -56, y: -56}
+        - {x: -48, y: -58}
+        - {x: 56, y: -58}
+        - {x: 56, y: 39}
+        - {x: 26, y: 58}
     - name: User Interface_9
       rect:
         serializedVersion: 2
@@ -188,8 +254,21 @@ TextureImporter:
         width: 91
         height: 88
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.5, y: 44}
+        - {x: -19.5, y: 44}
+        - {x: -32.5, y: 42}
+        - {x: -45.5, y: 26}
+        - {x: -45.5, y: -15}
+        - {x: -42.5, y: -31}
+        - {x: -25.5, y: -39}
+        - {x: -14.5, y: -44}
+        - {x: 23.5, y: -44}
+        - {x: 43.5, y: -22}
+        - {x: 43.5, y: 19}
+        - {x: 39.5, y: 30}
     - name: stripe
       rect:
         serializedVersion: 2
@@ -198,8 +277,10 @@ TextureImporter:
         width: 540
         height: 12
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
