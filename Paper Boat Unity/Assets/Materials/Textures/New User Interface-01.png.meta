@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: bc477672e95f1fd4da7f9f3ae520526b
-timeCreated: 1466844621
+timeCreated: 1459422007
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -27,7 +27,6 @@ TextureImporter:
     21300040: New User Interface-01_20
     21300042: New User Interface-01_21
     21300044: New User Interface-01_22
-    21300046: New User Interface-01_23
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -591,26 +590,6 @@ TextureImporter:
         - {x: 67, y: -60.5}
         - {x: 67, y: 54.5}
         - {x: 62, y: 64.5}
-    - name: New User Interface-01_23
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 19
-        width: 176
-        height: 175
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 75, y: 87.5}
-        - {x: -59, y: 87.5}
-        - {x: -88, y: 43.5}
-        - {x: -88, y: -44.5}
-        - {x: -53, y: -87.5}
-        - {x: 37, y: -87.5}
-        - {x: 65, y: -74.5}
-        - {x: 88, y: -50.5}
-        - {x: 88, y: 46.5}
     outline: []
   spritePackingTag: 
   userData: 
