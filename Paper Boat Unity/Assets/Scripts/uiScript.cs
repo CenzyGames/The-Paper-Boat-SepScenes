@@ -164,6 +164,7 @@ public class uiScript : MonoBehaviour {
 
     void Update()
     {
+		BackHardwareKeyPressed ();
 		if(Application.loadedLevelName == "GamePlay")
 		{
 			fpsText.text = score.ToString ()+ " m" ;//sets score text
@@ -196,11 +197,7 @@ public class uiScript : MonoBehaviour {
     }
 	public void BackHardwareKeyPressed()
 	{
-		if(Input.GetKeyDown(KeyCode.Escape) 
-		   && ui.activeInHierarchy == false 
-		   && gameMenu.transform.FindChild("Revive_Menu").gameObject.activeInHierarchy == false 
-		   && gameMenu.transform.FindChild("GameOver_Menu").gameObject.activeInHierarchy == false
-		   && gameMenu.transform.FindChild("SubmitScore").gameObject.activeInHierarchy == false)
+		if(Input.GetKeyDown(KeyCode.Escape) )
 		{
 			PauseAndPlay();
 		}

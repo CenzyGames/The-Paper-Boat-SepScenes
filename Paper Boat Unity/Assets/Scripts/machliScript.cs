@@ -34,7 +34,7 @@ public class machliScript : MonoBehaviour {
 		val = Mathf.Sin(count)*distance;
 		transform.eulerAngles = new Vector3(0, 270-angle, 0);
 		transform.position = new Vector3(transform.position.x, transform.position.y, position + val);				
-		transform.position += new Vector3(-0.045f, 0, 0) * Time.timeScale;			// -- original transform.position += new Vector3(-0.015f, 0, 0) * Time.timeScale;
+		transform.position += new Vector3(-0.025f, 0, 0) * Time.timeScale;			// -- original transform.position += new Vector3(-0.015f, 0, 0) * Time.timeScale;
 		count += speed;
 		
 		if (transform.position.x < -4.0f)

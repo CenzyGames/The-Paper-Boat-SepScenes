@@ -17,7 +17,7 @@ public class slipScript : MonoBehaviour {
 
 	IEnumerator move()
 	{
-		transform.Translate(-0.04f* Time.timeScale, 0, 0);		//RC -- original --transform.Translate(-0.01f* Time.timeScale, 0, 0) ;
+		transform.Translate(-0.02f* Time.timeScale, 0, 0);		//RC -- original --transform.Translate(-0.01f* Time.timeScale, 0, 0) ;
 		if (transform.position.x < -6)
 		{
 			Destroy(gameObject,0.1f);
@@ -47,7 +47,6 @@ public class slipScript : MonoBehaviour {
 			}
 			timer = timer - Time.deltaTime;
 		}
-		Debug.Log(""+timer);
 	}
 
 	void OnTriggerEnter(Collider pCol)
@@ -55,7 +54,6 @@ public class slipScript : MonoBehaviour {
 		if (pCol.gameObject.tag == "boat")
 		{
 			GameObject.FindGameObjectWithTag ("slipsound").GetComponent<AudioSource> ().Play ();
-			Debug.Log ("slip --- > Boat");	
 		}
 
 	}

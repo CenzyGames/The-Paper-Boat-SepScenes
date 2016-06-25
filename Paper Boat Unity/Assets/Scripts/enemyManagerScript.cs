@@ -35,8 +35,9 @@ public class enemyManagerScript : MonoBehaviour
 
     IEnumerator spawnSlip()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2.0f);		//Initually 0.5f - 25-06-2016
         Instantiate(slip,slip.transform.position, Quaternion.identity);
+		Debug.Log ("pos - " + slip.transform.position);
         StartCoroutine("spawnSlip");
     }
 

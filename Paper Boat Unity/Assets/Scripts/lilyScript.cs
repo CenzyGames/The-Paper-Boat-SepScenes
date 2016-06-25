@@ -32,7 +32,7 @@ public class lilyScript : MonoBehaviour{
 	IEnumerator move()
 	{
 	
-		transform.Translate(-0.03f, 0, 0) ;				//rc -- oRIGINAL --transform.Translate(-0.01f, 0, 0) ;
+		transform.Translate(-0.02f, 0, 0) ;				
 		if (transform.position.x < -4)
 		{
 			Destroy(gameObject,0.1f);

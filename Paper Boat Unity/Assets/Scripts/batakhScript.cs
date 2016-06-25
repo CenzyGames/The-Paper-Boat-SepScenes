@@ -26,7 +26,7 @@ public class batakhScript : MonoBehaviour {
 			transform.eulerAngles  = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z); 
 			length = -1;
 		}
-		speed = Random.Range(0.002f, 0.004f);
+		speed = Random.Range(0.001f, 0.003f);
 
 		Debug.Log (goUp + "-" + speed);
         StartCoroutine("createRipple"); 
