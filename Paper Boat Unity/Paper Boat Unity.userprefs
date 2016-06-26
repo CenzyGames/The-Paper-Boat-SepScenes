@@ -1,19 +1,37 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\uiScript.cs">
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UserInputWaterRipple.cs">
+>>>>>>> d4bc3d38c2311ac81234bba394ddd0d2f5c826f6
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UserInputWaterRipple.cs">
+>>>>>>> d4bc3d38c2311ac81234bba394ddd0d2f5c826f6
     <Files>
-      <File FileName="Assets\EnvironmentManager.cs" Line="62" Column="34" />
+      <File FileName="Assets\Scripts\uiScript.cs" Line="60" Column="1" />
       <File FileName="Assets\Scripts\inputManagerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\ripplenew.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\enemyManagerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\slipScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\uiScript.cs" Line="59" Column="45" />
       <File FileName="Assets\Scripts\boatScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\batakhScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\lilyScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\machliScript.cs" Line="1" Column="1" />
       <File FileName="Assets\BoatHighlight.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\levelManagerScript.cs" Line="137" Column="9" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <File FileName="Assets\Scripts\levelManagerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\UserInputWaterRipple.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Scripts\levelManagerScript.cs" Line="87" Column="1" />
+      <File FileName="Assets\UserInputWaterRipple.cs" Line="44" Column="1" />
+>>>>>>> d4bc3d38c2311ac81234bba394ddd0d2f5c826f6
+=======
+      <File FileName="Assets\Scripts\levelManagerScript.cs" Line="87" Column="1" />
+      <File FileName="Assets\UserInputWaterRipple.cs" Line="44" Column="1" />
+>>>>>>> d4bc3d38c2311ac81234bba394ddd0d2f5c826f6
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
