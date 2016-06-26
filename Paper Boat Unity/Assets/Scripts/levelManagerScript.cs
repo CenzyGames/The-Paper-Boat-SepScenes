@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class levelManagerScript : MonoBehaviour {
     public GameObject[] levels;
+	// New game object array to be created to have snowlevels
+	public GameObject[] snowLevels;
+
     GameObject level;
     public GameObject[] poolObj;
     List<GameObject> activeSets;
@@ -121,7 +124,17 @@ public class levelManagerScript : MonoBehaviour {
 
     void InstantiateLevel(float position, int index)
     {
-        level = Instantiate(levels[index], transform.position, Quaternion.identity) as GameObject;
+		// Here we will write if else for material swap
+		if (PlayerPrefs.GetInt ("environment") == 0) 
+		{
+			level = Instantiate(levels[index], transform.position, Quaternion.identity) as GameObject;
+		} 
+		else if (PlayerPrefs.GetInt ("environment") == 1) 
+		{
+			level = Instantiate(snowLevels[index], transform.position, Quaternion.identity) as GameObject;
+		}
+
+        
         level.transform.parent = transform;
         level.transform.position = new Vector3(position, 0, 0);
         level.SetActive(false);
@@ -143,7 +156,8 @@ public class levelManagerScript : MonoBehaviour {
                 pos += 4;
                 activeSets.Add(poolObj[i]);
             }
-        }        
+        }  
+
     }
 
     void createNewLevel(string name)
@@ -156,8 +170,19 @@ public class levelManagerScript : MonoBehaviour {
                 {
                    // print(gj.name);
                     gj.SetActive(true);
-                    gj.transform.position = new Vector3(3.9875f * (levels.Length - 1), 0, 0);
-                    activeSets.Add(gj);
+
+					// Condition for material swap
+
+					if (PlayerPrefs.GetInt ("environment") == 0)
+					{
+						gj.transform.position = new Vector3 (3.9875f * (levels.Length - 1), 0, 0);
+					} 
+					else 
+					{
+						gj.transform.position = new Vector3(3.9875f * (snowLevels.Length - 1), 0, 0);
+					}  
+
+					activeSets.Add(gj);
                     break;
                 }
             }     

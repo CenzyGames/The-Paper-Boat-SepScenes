@@ -30,6 +30,9 @@ public class boatScript : MonoBehaviour
 	public SoundStatus sound;
 	GameObject reviveMenu;
 
+	float MIN_Z = -1.937193f;
+	float MAX_Z = -2.534996f;
+
     void Start()
     {
 		isCollided = false; /// RC --- to set to false ion start
@@ -77,8 +80,18 @@ public class boatScript : MonoBehaviour
        		 }
        	 	transform.position = new Vector3(moveX, transform.position.y, transform.position.z);
        		 camXPos = Mathf.Lerp(Camera.main.transform.position.z, transform.position.z + difference, Time.deltaTime*2);
-       		 Camera.main.transform.position = new Vector3(cameraPos.x,cameraPos.y,camXPos);
 
+			// To restrict camera in a certain region
+			if(camXPos>MIN_Z)
+			{
+				camXPos = MIN_Z;
+			}
+			else if(camXPos < MAX_Z)
+				{
+				camXPos = MAX_Z;
+				}
+			Camera.main.transform.position = new Vector3(cameraPos.x,cameraPos.y,camXPos);
+				
 			/*resets boat's velocity*/
 			vel = GetComponent<Rigidbody> ().velocity;
       	  	newVelX = Mathf.Lerp(vel.x, 0, Time.deltaTime);

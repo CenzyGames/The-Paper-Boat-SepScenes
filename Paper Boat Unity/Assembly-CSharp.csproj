@@ -55,6 +55,7 @@
      <Compile Include="Assets\CataractRipple.cs" />
      <Compile Include="Assets\ColorSequence.cs" />
      <Compile Include="Assets\Destroy.cs" />
+     <Compile Include="Assets\EnvironmentManager.cs" />
      <Compile Include="Assets\FadeScript.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\CommonStatusCodes.cs" />

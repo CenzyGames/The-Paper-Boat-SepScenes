@@ -51,11 +51,13 @@ public class uiScript : MonoBehaviour {
 
 	int slipsCollectedInOneGame =0;
 
-
+	int[] boatPrice = {0,400, 900, 1500, 2200, 3000, 4000} ;
 
 	void Awake()
 	{
 		PlayGamesPlatform.Activate();
+		Debug.Log ("UI script changing environment");
+		GameObject.Find ("Environment").GetComponent<EnvironmentManager> ().LoadEnviroment();
 
 	}
 
@@ -243,19 +245,19 @@ public class uiScript : MonoBehaviour {
 	{
 		switch(xVal)
 		{
-			case 0: if(CheckSlipsValue(0)){	//gotoPanel(17.93f); 
+		case 0: if(CheckSlipsValue(boatPrice[0])){	//gotoPanel(17.93f); 
 				ShowConfirmationMenu();}break;
-			case 1: if(CheckSlipsValue(1000)){	//gotoPanel(17.93f); 
+		case 1: if(CheckSlipsValue(boatPrice[1])){	//gotoPanel(17.93f); 
 				ShowConfirmationMenu();}break;
-			case 2: if(CheckSlipsValue(2000)){	//gotoPanel(17.93f);
+		case 2: if(CheckSlipsValue(boatPrice[2])){	//gotoPanel(17.93f);
 				ShowConfirmationMenu();}break;
-			case 3: if(CheckSlipsValue(3000)){	//gotoPanel(17.93f);
+		case 3: if(CheckSlipsValue(boatPrice[3])){	//gotoPanel(17.93f);
 				ShowConfirmationMenu();}break;
-			case 4: if(CheckSlipsValue(4500)){	//gotoPanel(17.93f);
+		case 4: if(CheckSlipsValue(boatPrice[4])){	//gotoPanel(17.93f);
 				ShowConfirmationMenu();}break;
-			case 5: if(CheckSlipsValue(6000)){	//gotoPanel(17.93f);
+		case 5: if(CheckSlipsValue(boatPrice[5])){	//gotoPanel(17.93f);
 				ShowConfirmationMenu();}break;
-			case 6: if(CheckSlipsValue(10000)){	//gotoPanel(17.93f);
+		case 6: if(CheckSlipsValue(boatPrice[6])){	//gotoPanel(17.93f);
 				ShowConfirmationMenu();}break;
 			default : break;
 		} 
@@ -297,19 +299,18 @@ public class uiScript : MonoBehaviour {
 		slips = PlayerPrefs.GetInt("slips");
 		switch(index)
 		{
-		case 0: PlayerPrefs.SetInt("slips", slips ); Debug.Log("00000"); PlayerPrefs.SetInt("DefaultBoat", 0); break;
-		case 1: PlayerPrefs.SetInt("slips", slips - 1000);Debug.Log("00001");PlayerPrefs.SetInt("DefaultBoat", 1); break;
-		case 2: PlayerPrefs.SetInt("slips", slips - 2000);Debug.Log("00002");PlayerPrefs.SetInt("DefaultBoat", 2); break;
-		case 3: PlayerPrefs.SetInt("slips", slips - 3000);Debug.Log("00003");PlayerPrefs.SetInt("DefaultBoat", 3); break;
-		case 4: PlayerPrefs.SetInt("slips", slips - 4500);Debug.Log("00004");PlayerPrefs.SetInt("DefaultBoat", 4); break;
-		case 5: PlayerPrefs.SetInt("slips", slips - 6000);Debug.Log("00005");PlayerPrefs.SetInt("DefaultBoat", 5); break;
-		case 6: PlayerPrefs.SetInt("slips", slips - 10000);Debug.Log("00006");PlayerPrefs.SetInt("DefaultBoat", 6); break;
-		default : break;
+			case 0: PlayerPrefs.SetInt("slips", slips - boatPrice[0]); PlayerPrefs.SetInt("DefaultBoat", 0); break;
+			case 1: PlayerPrefs.SetInt("slips", slips - boatPrice[1]); PlayerPrefs.SetInt("DefaultBoat", 1); break;
+			case 2: PlayerPrefs.SetInt("slips", slips - boatPrice[2]); PlayerPrefs.SetInt("DefaultBoat", 2); break;
+			case 3: PlayerPrefs.SetInt("slips", slips - boatPrice[3]); PlayerPrefs.SetInt("DefaultBoat", 3); break;
+			case 4: PlayerPrefs.SetInt("slips", slips - boatPrice[4]); PlayerPrefs.SetInt("DefaultBoat", 4); break;
+			case 5: PlayerPrefs.SetInt("slips", slips - boatPrice[5]); PlayerPrefs.SetInt("DefaultBoat", 5); break;
+			case 6: PlayerPrefs.SetInt("slips", slips - boatPrice[6]); PlayerPrefs.SetInt("DefaultBoat", 6); break;
+			default : break;
 		}
 			slips = PlayerPrefs.GetInt("slips");
 			PlayerPrefs.Save();
 			slipText.text = " " + slips.ToString ();
-			print("Paise wala");
 			HideNotEnoughSlips();
 	}
 
@@ -386,14 +387,14 @@ public class uiScript : MonoBehaviour {
 	{
 		switch(PlayerPrefs.GetInt("BoatNumber"))
 		{
-			case 0: distanceXMultiplier.text = score.ToString () + " X 1.0" +  " = " + score*1.0f; CheckHighScore(score, 1.0f); break;
-			case 1: distanceXMultiplier.text = score.ToString () + " X 1.2" +  " = " + score*1.2f;CheckHighScore(score, 1.2f);break;
-			case 2: distanceXMultiplier.text = score.ToString () + " X 1.4" +  " = " + score*1.4f;CheckHighScore(score, 1.4f);break;
-			case 3: distanceXMultiplier.text = score.ToString () + " X 1.6" +  " = " + score*1.6f;CheckHighScore(score, 1.6f);break;
-			case 4: distanceXMultiplier.text = score.ToString () + " X 1.8" +  " = " + score*1.8f;CheckHighScore(score, 1.8f);break;
-			case 5: distanceXMultiplier.text = score.ToString () + " X 2.0" +  " = " + score*2.0f;CheckHighScore(score, 2.0f);break;
-			case 6: distanceXMultiplier.text = score.ToString () + " X 3.0" +  " = " + score*3.0f; CheckHighScore(score, 3.0f);break;
-			default: distanceXMultiplier.text = score.ToString () + " X 1.2" +  " = " + score*1.2f; CheckHighScore(score, 1.2f);break;
+		case 0: distanceXMultiplier.text = score.ToString () + " X 1" +  " = " + score*boatMultiplier[0] ; CheckHighScore(score, boatMultiplier[0] ); break;
+		case 1: distanceXMultiplier.text = score.ToString () + " X 2" +  " = " + score*boatMultiplier[1] ;CheckHighScore(score, boatMultiplier[1] );break;
+		case 2: distanceXMultiplier.text = score.ToString () + " X 3" +  " = " + score*boatMultiplier[2] ;CheckHighScore(score, boatMultiplier[2] );break;
+		case 3: distanceXMultiplier.text = score.ToString () + " X 4" +  " = " + score*boatMultiplier[3] ;CheckHighScore(score, boatMultiplier[3] );break;
+		case 4: distanceXMultiplier.text = score.ToString () + " X 5" +  " = " + score*boatMultiplier[4] ;CheckHighScore(score, boatMultiplier[4] );break;
+		case 5: distanceXMultiplier.text = score.ToString () + " X 6" +  " = " + score*boatMultiplier[5] ;CheckHighScore(score, boatMultiplier[5] );break;
+		case 6: distanceXMultiplier.text = score.ToString () + " X 7" +  " = " + score*boatMultiplier[6] ; CheckHighScore(score, boatMultiplier[6] );break;
+		default: distanceXMultiplier.text = score.ToString () + " X 1" +  " = " + score*boatMultiplier[7] ; CheckHighScore(score, boatMultiplier[0] );break;
 		}
 
 		if (score ==2) 
