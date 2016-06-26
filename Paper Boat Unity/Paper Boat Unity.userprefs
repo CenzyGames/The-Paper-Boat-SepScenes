@@ -2,7 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\uiScript.cs">
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UserInputWaterRipple.cs">
+>>>>>>> d4bc3d38c2311ac81234bba394ddd0d2f5c826f6
 =======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UserInputWaterRipple.cs">
 >>>>>>> d4bc3d38c2311ac81234bba394ddd0d2f5c826f6
@@ -22,8 +26,13 @@
       <File FileName="Assets\BoatHighlight.cs" Line="1" Column="1" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\levelManagerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\UserInputWaterRipple.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Scripts\levelManagerScript.cs" Line="87" Column="1" />
+      <File FileName="Assets\UserInputWaterRipple.cs" Line="44" Column="1" />
+>>>>>>> d4bc3d38c2311ac81234bba394ddd0d2f5c826f6
 =======
       <File FileName="Assets\Scripts\levelManagerScript.cs" Line="87" Column="1" />
       <File FileName="Assets\UserInputWaterRipple.cs" Line="44" Column="1" />
