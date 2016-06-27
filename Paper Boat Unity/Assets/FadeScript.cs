@@ -23,7 +23,7 @@ public class FadeScript : MonoBehaviour {
 	{
 
 		yield return new WaitForSeconds(fadeTimeStart);
-		Application.LoadLevel ("GamePlay");
+		Application.LoadLevel ("Menu");
 
 	}	
 		
