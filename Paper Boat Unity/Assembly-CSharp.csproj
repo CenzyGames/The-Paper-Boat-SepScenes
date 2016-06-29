@@ -252,6 +252,7 @@
      <Compile Include="Assets\Scripts\uiScript.cs" />
      <Compile Include="Assets\SoundStatus.cs" />
      <Compile Include="Assets\StoneCollisions.cs" />
+     <Compile Include="Assets\TapCounterForInstructions.cs" />
      <Compile Include="Assets\UserInputWaterRipple.cs" />
      <Compile Include="Assets\VisibilityController.cs" />
      <Compile Include="Assets\destroyripple.cs" />

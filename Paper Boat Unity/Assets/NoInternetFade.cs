@@ -25,7 +25,7 @@ public class NoInternetFade : MonoBehaviour {
 
 			gameObject.GetComponent<Text> ().color = new Color(1, 1, 1, alphaValue);
 
-			Debug.Log ("Decreasing value" + Time.deltaTime);
+			//Debug.Log ("Decreasing value" + Time.deltaTime);
 		}
 
 		if(gameObject.GetComponent<Text> ().color.a < 0.2f)
