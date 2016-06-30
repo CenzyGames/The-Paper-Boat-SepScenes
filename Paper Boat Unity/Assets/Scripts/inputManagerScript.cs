@@ -54,12 +54,12 @@ public class inputManagerScript : MonoBehaviour
 		ball.name = "ball";
 		ball.tag = "ball";
 		ball.transform.localPosition = hit.point + (Vector3.up * 0.07f);			// Original -  ball.transform.localPosition = hit.point + (Vector3.up * 0.05f);
-		ball.transform.localScale *= 0.1f;						//----RC			// Original -- ball.transform.localScale *= 0.05f;
+		ball.transform.localScale *= 0.05f;						//----RC			// Original -- ball.transform.localScale *= 0.05f;
 
 		ball.AddComponent<Rigidbody>();
 		ball.GetComponent<Rigidbody>().useGravity = false;
 		ball.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
-		ball.GetComponent<Rigidbody>().mass = 4;		// Orignial - ball.GetComponent<Rigidbody>().mass = 2;
+		ball.GetComponent<Rigidbody>().mass = 20;		// Orignial - ball.GetComponent<Rigidbody>().mass = 2;
 		ball.AddComponent<ConstantForce>();
 
 		float x = getAngle(hit.point, boat.transform.localPosition);
