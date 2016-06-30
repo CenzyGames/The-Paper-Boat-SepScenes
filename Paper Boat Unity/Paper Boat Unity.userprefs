@@ -1,19 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp-firstpass.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\enemyManagerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\uiScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\enemyManagerScript.cs" Line="26" Column="1" />
-      <File FileName="Assets\FadeScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\SceneManager.cs" Line="28" Column="43" />
+      <File FileName="Assets\Scripts\enemyManagerScript.cs" Line="235" Column="39" />
       <File FileName="Assets\Scripts\inputManagerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\batakhScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\UserInputWaterRipple.cs" Line="1" Column="1" />
-      <File FileName="Assets\SceneManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\uiScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\uiScript.cs" Line="391" Column="4" />
       <File FileName="Assets\CataractRipple.cs" Line="1" Column="1" />
       <File FileName="Assets\BoatCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\boatScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\NoInternetFade.cs" Line="1" Column="1" />
-      <File FileName="Assets\TapCounterForInstructions.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\boatScript.cs" Line="2" Column="15" />
+      <File FileName="Assets\DisplayScore.cs" Line="21" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

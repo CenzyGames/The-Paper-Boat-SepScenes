@@ -21,8 +21,12 @@ public class SceneManager : MonoBehaviour {
 
 	public void GamePlaySceneLoad()
 	{
-		Application.LoadLevel("GamePlay");
-		Debug.Log("PLY GME");
+		if (PlayerPrefs.GetInt ("TapCount") >= 5) {
+			Application.LoadLevel ("GamePlay");
+		} else 
+		{
+			Application.LoadLevel ("Instructions");
+		}
 	}
 
 	public void GameOverSceneLoad()

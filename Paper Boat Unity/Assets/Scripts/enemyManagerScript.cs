@@ -15,7 +15,7 @@ public class enemyManagerScript : MonoBehaviour
 
 	void Start ()
     {
-			sec = 55;		//Will set to zero as the game starts
+			sec = 1;		//Will set to zero as the game starts
 			InitiateSpawn ();		//Enemies will start spwaning
     }
 
@@ -27,12 +27,10 @@ public class enemyManagerScript : MonoBehaviour
 		} 
 		else if (sec >= 31 && sec <= 60 )
 		{
-			Debug.Log ("Time is above 30");
 			StartCoroutine ("spawnDuckFish"); 
 		}
 		else if (sec >= 61 && sec <= 90 )
 		{
-			Debug.Log ("Time is above 60");
 			StartCoroutine ("spawnCrocodile"); 
 		}
 			
@@ -228,15 +226,15 @@ public class enemyManagerScript : MonoBehaviour
 		{
 			StartCoroutine ("spawnPetalIsland");
 		} 
-		else if (sec >= 31 && sec <= 60 )
+		else if (sec >= 31 && sec <= 90 )
 		{
 			StartCoroutine ("spawnDuckFish"); 
 		}
-		else if (sec >= 61 && sec <= 90 )
+		else if (sec >= 91 && sec <= 150 )
 		{
 			StartCoroutine ("spawnCrocodile"); 
 		}
-		else if (sec >= 91 && sec <= 120 )
+		else if (sec >= 151 && sec <= 210 )
 		{
 			StartCoroutine ("spawnLog"); 
 		}

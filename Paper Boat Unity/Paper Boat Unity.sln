@@ -9,8 +9,6 @@ Project("{0594DF19-ED63-573C-03CE-78E321C5F1D9}") = "Paper Boat Unity", "Assembl
 EndProject
 Project("{0594DF19-ED63-573C-03CE-78E321C5F1D9}") = "Paper Boat Unity", "Assembly-CSharp-Editor.csproj", "{03FE62A4-752D-CA38-A454-735FB6C59FDC}"
 EndProject
-Project("{0594DF19-ED63-573C-03CE-78E321C5F1D9}") = "Paper Boat Unity", "Assembly-UnityScript.unityproj", "{882451B7-54EA-A6B0-5E47-52FC631A3A02}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,10 +31,6 @@ Global
 		{03FE62A4-752D-CA38-A454-735FB6C59FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03FE62A4-752D-CA38-A454-735FB6C59FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03FE62A4-752D-CA38-A454-735FB6C59FDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{882451B7-54EA-A6B0-5E47-52FC631A3A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{882451B7-54EA-A6B0-5E47-52FC631A3A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{882451B7-54EA-A6B0-5E47-52FC631A3A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{882451B7-54EA-A6B0-5E47-52FC631A3A02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

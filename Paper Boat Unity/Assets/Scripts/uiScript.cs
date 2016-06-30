@@ -56,7 +56,6 @@ public class uiScript : MonoBehaviour {
 	void Awake()
 	{
 		PlayGamesPlatform.Activate();
-		Debug.Log ("UI script changing environment");
 		GameObject.Find ("Environment").GetComponent<EnvironmentManager> ().LoadEnviroment();
 
 	}
@@ -105,11 +104,6 @@ public class uiScript : MonoBehaviour {
 
 		boatSpawnIndex = PlayerPrefs.GetInt ("BoatNumber");
 		playGame(0);
-//		Debug.Log("GME STRTED aGIN");
-	//	if (GameObject.Find ("Main_Menu").gameObject.activeInHierarchy == true) {
-//			Instruction.SetActive (false);
-		//	Debug.Log ("Hide ---- 1");
-	//	} 
     }
 
     public void showAd()
@@ -270,7 +264,6 @@ public class uiScript : MonoBehaviour {
 		slips = PlayerPrefs.GetInt("slips");
 		if (slips - value <= 0)
 		{
-			print("kangaal Manushya");
 			ui.gameObject.transform.FindChild("Boat_Menu").gameObject.transform.FindChild("Not Enough Slips").gameObject.SetActive(true);
 			return false;
 		}
@@ -383,18 +376,18 @@ public class uiScript : MonoBehaviour {
 		gameMenu.transform.FindChild ("GameOver_Menu").gameObject.transform.FindChild ("High Score").gameObject.transform.FindChild ("HighScoreDisplay").GetComponent<Text> ().text = PlayerPrefs.GetFloat ("HighScore") + "";
 	}
 
-	void CalculateDistance()			 //RC -- Calculates the Distance
+	public void CalculateDistance()			 //RC -- Calculates the Distance
 	{
 		switch(PlayerPrefs.GetInt("BoatNumber"))
 		{
-		case 0: distanceXMultiplier.text = score.ToString () + " X 1" +  " = " + score*boatMultiplier[0] ; CheckHighScore(score, boatMultiplier[0] ); break;
-		case 1: distanceXMultiplier.text = score.ToString () + " X 2" +  " = " + score*boatMultiplier[1] ;CheckHighScore(score, boatMultiplier[1] );break;
-		case 2: distanceXMultiplier.text = score.ToString () + " X 3" +  " = " + score*boatMultiplier[2] ;CheckHighScore(score, boatMultiplier[2] );break;
-		case 3: distanceXMultiplier.text = score.ToString () + " X 4" +  " = " + score*boatMultiplier[3] ;CheckHighScore(score, boatMultiplier[3] );break;
-		case 4: distanceXMultiplier.text = score.ToString () + " X 5" +  " = " + score*boatMultiplier[4] ;CheckHighScore(score, boatMultiplier[4] );break;
-		case 5: distanceXMultiplier.text = score.ToString () + " X 6" +  " = " + score*boatMultiplier[5] ;CheckHighScore(score, boatMultiplier[5] );break;
-		case 6: distanceXMultiplier.text = score.ToString () + " X 7" +  " = " + score*boatMultiplier[6] ; CheckHighScore(score, boatMultiplier[6] );break;
-		default: distanceXMultiplier.text = score.ToString () + " X 1" +  " = " + score*boatMultiplier[7] ; CheckHighScore(score, boatMultiplier[0] );break;
+			case 0:  CheckHighScore(score, boatMultiplier[0] ); break;
+			case 1: CheckHighScore(score, boatMultiplier[1] );break;
+			case 2: CheckHighScore(score, boatMultiplier[2] );break;
+			case 3: CheckHighScore(score, boatMultiplier[3] );break;
+			case 4: CheckHighScore(score, boatMultiplier[4] );break;
+			case 5: CheckHighScore(score, boatMultiplier[5] );break;
+			case 6:  CheckHighScore(score, boatMultiplier[6] );break;
+			default:  CheckHighScore(score, boatMultiplier[0] );break;
 		}
 
 		if (score ==2) 
@@ -406,10 +399,13 @@ public class uiScript : MonoBehaviour {
 
 	void CheckHighScore(int score , float multiplier)			///--- RC --- To check high score and save it in "HIGHSCORE"
 	{
+		Debug.Log ("Score caluclating");
+		PlayerPrefs.SetString ("CurrentScore", score + " X "  + multiplier  + " = " + score*multiplier);
 		if(PlayerPrefs.GetFloat("HighScore") < score*multiplier)
 		{
 			PlayerPrefs.SetFloat("HighScore", score*multiplier);
 		}
+	
 	}
 
 	public void SubmitScore()
