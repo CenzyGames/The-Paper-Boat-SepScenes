@@ -39,6 +39,8 @@ public class uiScript : MonoBehaviour {
 
 	public GameObject Instruction;
 
+	public GameObject EnvironmentConfirmationMenu; 
+
 	string message ="";	// RC --- Required to show message on the screen
 	string internetNotconnected = "Internet not connected";
 	string blank = "";
@@ -52,6 +54,8 @@ public class uiScript : MonoBehaviour {
 	int slipsCollectedInOneGame =0;
 
 	int[] boatPrice = {0,400, 900, 1500, 2200, 3000, 4000} ;
+
+
 
 	void Awake()
 	{
@@ -102,7 +106,10 @@ public class uiScript : MonoBehaviour {
 		PlayerPrefs.SetInt("slipsCollectedInOneGame", slipsCollectedInOneGame);
 
 		boatSpawnIndex = PlayerPrefs.GetInt ("BoatNumber");
-		playGame(0);
+		if(Application.loadedLevelName == "GamePlay")
+			playGame(boatSpawnIndex);
+
+		EnvironmentConfirmationMenu.gameObject.SetActive(false);
     }
 
     public void showAd()
@@ -163,24 +170,21 @@ public class uiScript : MonoBehaviour {
 		if(Application.loadedLevelName == "GamePlay")
 		{
 			fpsText.text = score.ToString ()+ " m" ;//sets score text
-			//CalculateDistance();
 		}
 		if (move)
         {
             moveBy = Vector3.MoveTowards(Camera.main.transform.position, moveTo, 1);
             Camera.main.transform.position = moveBy;
         }
-							// RC ----- for functionallity of backhardwarekey
     }
 
 	/*starts game*/
 	public void playGame(int boatSpawnIndex)
     {
 		Time.timeScale =1; 
+		if(transform.FindChild("Score")!=null)
 		transform.FindChild("Score").gameObject.SetActive(true);
-		//manager.SetActive(true);
 		bridge.SetActive(false);
-//		ui.SetActive(false);
         move = false;
 		/*Instantiates the selected boat*/
 		PlayerPrefs.SetInt("BoatNumber", boatSpawnIndex);		//RC --- To save the boat number and then to calculate the score.
@@ -276,6 +280,7 @@ public class uiScript : MonoBehaviour {
 	
 	public void buyBoat(int index)
 	{
+		PlayerPrefs.SetInt ("BoatNumber", index);
 		Debug.Log("Index" + index);
 		BoatBuyConfirmation(index);
 		if (boatBought[index])
@@ -506,7 +511,50 @@ public class uiScript : MonoBehaviour {
 		ui.transform.FindChild("Shop_Menu").gameObject.SetActive(true);	
 	}
 
+	public void ShowEnvironmentDefaultMenu()
+	{
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(false);
+		EnvironmentConfirmationMenu.gameObject.SetActive(true);
+		EnvironmentConfirmationMenu.transform.FindChild("Spring").gameObject.SetActive(true);
+		EnvironmentConfirmationMenu.transform.FindChild("Snow").gameObject.SetActive(false);
+	}
+
+	public void HideEnvironmentDefaultMenu()
+	{
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(true);
+		EnvironmentConfirmationMenu.gameObject.SetActive(false);
+		EnvironmentConfirmationMenu.transform.FindChild("Spring").gameObject.SetActive(false);
+		EnvironmentConfirmationMenu.transform.FindChild("Snow").gameObject.SetActive(false);
+	}
+
+	public void ShowEnvironmentSnowMenu()
+	{
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(false);
+		EnvironmentConfirmationMenu.gameObject.SetActive(true);
+		EnvironmentConfirmationMenu.transform.FindChild("Snow").gameObject.SetActive(true);
+		EnvironmentConfirmationMenu.transform.FindChild("Spring").gameObject.SetActive(false);
+	}
+	
+	public void HideEnvironmentSnowMenu()
+	{
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(true);
+		EnvironmentConfirmationMenu.gameObject.SetActive(false);
+		EnvironmentConfirmationMenu.transform.FindChild("Snow").gameObject.SetActive(false);
+		EnvironmentConfirmationMenu.transform.FindChild("Spring").gameObject.SetActive(false);
+	}
+	public void ShowEnvironmentMenu()
+	{
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(true);
+		ui.transform.FindChild("Shop_Menu").gameObject.SetActive(false);
 		
+	}
+	public void HideEnvironmentMenu()
+	{
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(false);
+		ui.transform.FindChild("Shop_Menu").gameObject.SetActive(true);
+
+	}
+	
 
 	
 }
