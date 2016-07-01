@@ -3,9 +3,14 @@ using System.Collections;
 
 public class SceneManager : MonoBehaviour {
 
+	//public GameObject Image;
+	int fadeTimeStart = 8;
+	//public int fadeTimeEnd;
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		if(Application.loadedLevelName == "SplashScreen")
+		StartCoroutine("StartTimer");
 	}
 	
 	// Update is called once per frame
@@ -44,5 +49,13 @@ public class SceneManager : MonoBehaviour {
 	{
 		Application.Quit();
 		Debug.Log("Exit Quit");
+	}	
+
+	IEnumerator StartTimer()
+	{
+		
+		yield return new WaitForSeconds(fadeTimeStart);
+		Application.LoadLevel ("Menu");
+		
 	}	
 }

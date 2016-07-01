@@ -56,9 +56,7 @@ public class uiScript : MonoBehaviour {
 	void Awake()
 	{
 		PlayGamesPlatform.Activate();
-		Debug.Log ("UI script changing environment");
 		GameObject.Find ("Environment").GetComponent<EnvironmentManager> ().LoadEnviroment();
-
 	}
 
     void Start()
@@ -105,11 +103,6 @@ public class uiScript : MonoBehaviour {
 
 		boatSpawnIndex = PlayerPrefs.GetInt ("BoatNumber");
 		playGame(0);
-//		Debug.Log("GME STRTED aGIN");
-	//	if (GameObject.Find ("Main_Menu").gameObject.activeInHierarchy == true) {
-//			Instruction.SetActive (false);
-		//	Debug.Log ("Hide ---- 1");
-	//	} 
     }
 
     public void showAd()
@@ -122,7 +115,7 @@ public class uiScript : MonoBehaviour {
 				Debug.Log("-----1");
 				Advertisement.Show("video", new ShowOptions {			//RC---
 					resultCallback = result => {						//RC---
-						Debug.Log(result.ToString());					//RC---
+								//RC---
 					}													//RC---
 				});														//RC---  Previous --> //Advertisement.Show();
 				PlayerPrefs.SetString("ReviveByAds","False");				//--- RC to check that revive button is pressed only once
@@ -283,6 +276,7 @@ public class uiScript : MonoBehaviour {
 	
 	public void buyBoat(int index)
 	{
+		Debug.Log("Index" + index);
 		BoatBuyConfirmation(index);
 		if (boatBought[index])
 		{
@@ -296,6 +290,7 @@ public class uiScript : MonoBehaviour {
 
 	void BoatBuyConfirmation(int index)
 	{
+
 		slips = PlayerPrefs.GetInt("slips");
 		switch(index)
 		{
@@ -312,6 +307,7 @@ public class uiScript : MonoBehaviour {
 			PlayerPrefs.Save();
 			slipText.text = " " + slips.ToString ();
 			HideNotEnoughSlips();
+		Debug.Log("Index 2" + index);
 	}
 
 	public void HideNotEnoughSlips()
@@ -479,7 +475,7 @@ public class uiScript : MonoBehaviour {
 	
 	public void ShowConfirmationMenu()
 	{
-		ui.transform.FindChild("Confirmation_Menu").gameObject.SetActive(true);
+		ui.transform.FindChild("Boat Confirmation_Menu").gameObject.SetActive(true);
 		ui.transform.FindChild("Boat_Menu").gameObject.SetActive(false);
 	}
 
@@ -487,28 +483,27 @@ public class uiScript : MonoBehaviour {
 	{
 
 		 ui.transform.FindChild("Boat_Menu").gameObject.SetActive(true);
-		 ui.transform.FindChild("Confirmation_Menu").gameObject.SetActive(false);
+		 ui.transform.FindChild("Boat Confirmation_Menu").gameObject.SetActive(false);
 	}
 
 	public void ShowExitConfirmationMenu()
 	{
 		ui.transform.FindChild("Main_Menu").gameObject.SetActive(false);
-	//	transform.FindChild("Score").gameObject.SetActive(false);
 		transform.FindChild("Slips").gameObject.SetActive(false);
 		ui.transform.FindChild("Exit_Menu").gameObject.SetActive(true);
 	}
 
-//	public void HideExitConfirmationMenu()
-//	{
-//		//- ui.transform.FindChild("Exit_Menu").gameObject.SetActive(false);
-//		//- transform.FindChild("Slips").gameObject.SetActive(true);
-//		//- ui.transform.FindChild("Main_Menu").gameObject.SetActive(true);
-//	}
 
-	public void ShowInstructions()
+	public void ShowSlipsMenu()
 	{
+		ui.transform.FindChild("Slips_Menu").gameObject.SetActive(true);
+		ui.transform.FindChild("Shop_Menu").gameObject.SetActive(false);
+	}
 
-
+	public void HideSlipsMenu()
+	{
+		ui.transform.FindChild("Slips_Menu").gameObject.SetActive(false);
+		ui.transform.FindChild("Shop_Menu").gameObject.SetActive(true);	
 	}
 
 		
