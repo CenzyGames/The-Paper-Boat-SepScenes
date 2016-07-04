@@ -10,72 +10,68 @@ public class enemyManagerScript : MonoBehaviour
     public GameObject slip;
     int objNum;
 
-	//static int timer = 0;
 	static int sec ;			//Global timer for game to control spawn enemies
 
 	void Start ()
     {
-			sec = 55;		//Will set to zero as the game starts
-			InitiateSpawn ();		//Enemies will start spwaning
+			sec = 210;		//Will set to zero as the game starts
+			StartCoroutine ("IncreaseTime");
+			StartCoroutine("spawnSlip");
+			EnemyPhases();
     }
-
-	public void InitiateSpawn()
-	{
-		if (sec <= 30) 
-		{
-			StartCoroutine ("spawnPetalIsland");
-		} 
-		else if (sec >= 31 && sec <= 60 )
-		{
-			Debug.Log ("Time is above 30");
-			StartCoroutine ("spawnDuckFish"); 
-		}
-		else if (sec >= 61 && sec <= 90 )
-		{
-			Debug.Log ("Time is above 60");
-			StartCoroutine ("spawnCrocodile"); 
-		}
-			
-		StartCoroutine ("spawnSlip");
-		StartCoroutine ("IncreaseTime");
-	}
-
-	public void StartSpawn()
-	{
-		if (PlayerPrefs.GetInt ("Instruct63") == 1) {
-		//	InitiateSpawn ();
-		}
-	}
-
-    IEnumerator spawnSlip()
-    {
-        yield return new WaitForSeconds(2.0f);		//Initually 0.5f - 25-06-2016
-        Instantiate(slip,slip.transform.position, Quaternion.identity);
-		Debug.Log ("pos - " + slip.transform.position);
-        StartCoroutine("spawnSlip");
-    }
-
 	IEnumerator IncreaseTime()
 	{
 		yield return new WaitForSeconds (1);
 		Debug.Log (sec);
 		sec += 1;
+		if (sec >= 281)
+		{
+			sec = 210;
+			EnemyPhases();
+		}
 		StartCoroutine ("IncreaseTime");
 	}
 
-//	IEnumerator spawnObj2()
-//	{
-//		int num = Random.Range(0, 10);
-//		if (num % 3 == 1 && num != 0)
-//		{
-//			objNum = (int)obj.petal;
-//		}
-//		currentObject = Instantiate(objects[objNum],objects[objNum].transform.position, Quaternion.identity) as GameObject;
-//		currentObject.transform.parent = transform;
-//		yield return new WaitForSeconds(time);
-//		time = Random.Range(5.0f, 7.0f);
-//		StartCoroutine("spawnObj2");
-//	}
+    IEnumerator spawnSlip()
+    {
+        yield return new WaitForSeconds(2.0f);	
+		if (!(sec >= 211 && sec <= 230) )
+		{
+        Instantiate(slip,slip.transform.position, Quaternion.identity);
+		}
+		StartCoroutine("spawnSlip");
+    }
+	
+	void EnemyPhases()
+	{
+		if (sec <= 30) 
+		{
+			StartCoroutine ("spawnPetalIsland");
+		} 
+		else if (sec >= 31 && sec <= 90 )
+		{
+			StartCoroutine ("spawnDuckFish"); 
+
+		}
+		else if (sec >= 91 && sec <= 150 )
+		{
+			StartCoroutine ("spawnCrocodile"); 
+		}
+		else if (sec >= 151 && sec <= 210 )
+		{
+			StartCoroutine ("spawnLog"); 
+		}
+		else if (sec >= 211 && sec <= 230 )
+		{
+			StartCoroutine ("BonusLevel"); 
+		}
+		else if (sec >= 231 && sec <= 275)
+		{
+			StartCoroutine ("spawnLog"); 
+		}
+
+		
+	}
 
 	IEnumerator spawnPetalIsland()
 	{
@@ -97,8 +93,6 @@ public class enemyManagerScript : MonoBehaviour
 		yield return new WaitForSeconds(2);
 		time = Random.Range(2.0f, 4.0f);
 		EnemyPhases ();
-
-
 	}
 
 	IEnumerator spawnDuckFish()
@@ -186,7 +180,6 @@ public class enemyManagerScript : MonoBehaviour
 		}
 		else  if (num == 5)
 		{
-			Debug.Log ("Log aya");
 			objNum = (int)obj.loglog;
 		}
 		currentObject = Instantiate(objects[objNum],objects[objNum].transform.position, Quaternion.identity) as GameObject;
@@ -222,24 +215,17 @@ public class enemyManagerScript : MonoBehaviour
 		StartCoroutine("spawnObj");
 	}
 
-	void EnemyPhases()
+	IEnumerator BonusLevel()
 	{
-		if (sec <= 30) 
-		{
-			StartCoroutine ("spawnPetalIsland");
-		} 
-		else if (sec >= 31 && sec <= 60 )
-		{
-			StartCoroutine ("spawnDuckFish"); 
-		}
-		else if (sec >= 61 && sec <= 90 )
-		{
-			StartCoroutine ("spawnCrocodile"); 
-		}
-		else if (sec >= 91 && sec <= 120 )
-		{
-			StartCoroutine ("spawnLog"); 
-		}
-
+		yield return new WaitForSeconds(0.5f);
+		Debug.Log("Bonus level");
+		SlipPattern();
+		EnemyPhases();
 	}
+
+	void SlipPattern()
+	{
+			Instantiate(slip,slip.transform.position, Quaternion.identity);	
+	}
+
 }
