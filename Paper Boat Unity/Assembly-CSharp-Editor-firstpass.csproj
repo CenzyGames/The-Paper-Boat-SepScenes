@@ -112,10 +112,14 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="JarResolverLib">
+<<<<<<< HEAD
+ <HintPath>D:/Unity Projects/GIT/Paper boat/Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll</HintPath>
+=======
  <HintPath>E:/GIT/The paper boat/Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll</HintPath>
  </Reference>
  <Reference Include="Sdkbox">
  <HintPath>E:/GIT/The paper boat/Paper Boat Unity/Assets/SDKBOX/sdkbox/Editor/Sdkbox.dll</HintPath>
+>>>>>>> 977c60876a858f4a762d9222b0fb239bece70d01
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
