@@ -19,7 +19,7 @@ public class islandScript : MonoBehaviour
 	{
 	//	TimeIncrease();
 	
-		transform.Translate(-0.03f, 0, 0) ;				//Original - transform.Translate(-0.01f, 0, 0) ;
+		transform.Translate(-0.02f, 0, 0) ;			
 		if (transform.position.x < -4)
 		{
 			Destroy(gameObject,0.1f);

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnvironmentManager : MonoBehaviour {
 
@@ -15,6 +16,7 @@ public class EnvironmentManager : MonoBehaviour {
 	{
 		gameObjects = GameObject.FindGameObjectsWithTag ("TextureSnow");
 		WaterSurfaces = GameObject.FindGameObjectsWithTag ("WaterSurface");
+		PlayerPrefs.SetInt("envrionmentBought", 0);
 		LoadEnviroment ();
 	}
 	
@@ -45,7 +47,7 @@ public class EnvironmentManager : MonoBehaviour {
 
 	public void changeTextureToSnow()
 	{
-		PlayerPrefs.SetInt ("environment", 1);
+	//	PlayerPrefs.SetInt ("environment", 1);
 		Debug.Log ("changing to snow");
 		foreach (GameObject snow in gameObjects) 
 		{
@@ -58,7 +60,7 @@ public class EnvironmentManager : MonoBehaviour {
 
 	public void changeTextureToDefault()
 	{
-		PlayerPrefs.SetInt ("environment", 0);
+		//PlayerPrefs.SetInt ("environment", 0);
 		Debug.Log ("changing to Default");
 		foreach (GameObject snow in gameObjects) 
 		{
@@ -70,7 +72,7 @@ public class EnvironmentManager : MonoBehaviour {
 
 	public void ChangeWaterToSnow()
 	{
-		PlayerPrefs.SetInt ("environment", 1);
+		//PlayerPrefs.SetInt ("environment", 1);
 		foreach (GameObject WaterSurface in WaterSurfaces) 
 		{
 			if(WaterSurface.GetComponent<Renderer>().material.mainTexture != null)
@@ -80,11 +82,24 @@ public class EnvironmentManager : MonoBehaviour {
 
 	public void ChangeWaterToDefault()
 	{
-		PlayerPrefs.SetInt ("environment", 0);
+		//PlayerPrefs.SetInt ("environment", 0);
 		foreach (GameObject WaterSurface in WaterSurfaces) 
 		{
 			if(WaterSurface.GetComponent<Renderer>().material.mainTexture != null)
 				WaterSurface.GetComponent<Renderer>().material.mainTexture = WaterDefaultTexture;
 		}
+	}
+
+	public void SlipsDeduct()
+	{
+		if(PlayerPrefs.GetInt("envrionmentBought") == 0)
+		{
+			PlayerPrefs.SetInt("slips", PlayerPrefs.GetInt("slips") - 700);
+			GameObject.Find("Slips").GetComponent<Text>().text = PlayerPrefs.GetInt("slips") +"";
+			Debug.Log ("Slips deducted. snow enviroment bought");
+		}
+
+		PlayerPrefs.SetInt("envrionmentBought", 1);
+
 	}
 }
