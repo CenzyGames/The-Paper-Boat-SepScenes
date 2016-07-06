@@ -1,7 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Paper Boat Unity/Assets/SDKBOX/iap/Editor.meta
 guid: 419464dfb843d45a48c2dc08f65c4749
+=======
+guid: fb22593aac5e5bd40868942a75d3f5d0
+>>>>>>> Reset Branches:Paper Boat Unity/Assets/SDKBOX/sdkbox/Editor.meta
 folderAsset: yes
-timeCreated: 1467398424
+timeCreated: 1467788584
 licenseType: Free
 DefaultImporter:
   userData: 
