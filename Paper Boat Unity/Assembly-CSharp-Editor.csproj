@@ -83,19 +83,6 @@
      <None Include="Assets\PeerPlay\bla.shader" />
      <None Include="Assets\Ripple\RippleEffect.shader" />
      <None Include="Assets\Scripts\Batakh script old.txt" />
-<<<<<<< HEAD
- <Reference Include="Assembly-UnityScript">
- <HintPath>D:/Unity Projects/GIT/Paper boat/Paper Boat Unity/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
- </Reference>
-=======
-<<<<<<< HEAD
-     <None Include="Assets\Plugins\Android\unityads\AndroidManifest.xml" />
- <Reference Include="Assembly-UnityScript">
- <HintPath>D:/Unity Projects/GIT/Paper boat/Paper Boat Unity/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
- </Reference>
-=======
->>>>>>> 977c60876a858f4a762d9222b0fb239bece70d01
->>>>>>> 7ea9a5d22a3a80ce97dda380bb5e27ca7595d1ae
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -117,23 +104,11 @@
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
-<<<<<<< HEAD
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="JarResolverLib">
- <HintPath>D:/Unity Projects/GIT/Paper boat/Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll</HintPath>
-=======
- <Reference Include="JarResolverLib">
-<<<<<<< HEAD
- <HintPath>D:/Unity Projects/GIT/Paper boat/Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll</HintPath>
-=======
- <HintPath>E:/GIT/The paper boat/Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll</HintPath>
- </Reference>
- <Reference Include="Sdkbox">
- <HintPath>E:/GIT/The paper boat/Paper Boat Unity/Assets/SDKBOX/sdkbox/Editor/Sdkbox.dll</HintPath>
->>>>>>> 977c60876a858f4a762d9222b0fb239bece70d01
->>>>>>> 7ea9a5d22a3a80ce97dda380bb5e27ca7595d1ae
+ <HintPath>F:/Cenzy/Paper_Boat/Paper Boat Scene separated/The Paper Boat SepScene/Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll</HintPath>
  </Reference>
  <Reference Include="Sdkbox">
  <HintPath>F:/Cenzy/Paper_Boat/Paper Boat Scene separated/The Paper Boat SepScene/Paper Boat Unity/Assets/SDKBOX/sdkbox/Editor/Sdkbox.dll</HintPath>
@@ -148,21 +123,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{FEC64410-8E5C-17AC-B4C8-FC043D2A5135}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{86E30651-3A0E-1196-186E-39B5A8316F78}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
-<<<<<<< HEAD
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{E6D7AC52-0F4E-8237-856E-333D118DB37A}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
-=======
-=======
->>>>>>> Reset Branches
     <ProjectReference Include="Assembly-UnityScript.unityproj">
       <Project>{882451B7-54EA-A6B0-5E47-52FC631A3A02}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
->>>>>>> 977c60876a858f4a762d9222b0fb239bece70d01
->>>>>>> 7ea9a5d22a3a80ce97dda380bb5e27ca7595d1ae
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
