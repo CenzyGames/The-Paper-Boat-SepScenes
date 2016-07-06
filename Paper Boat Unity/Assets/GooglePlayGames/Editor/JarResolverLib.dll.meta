@@ -1,5 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll.meta
 guid: 16d87716c55b15a4b994ab6be1be6d2a
+timeCreated: 1466844862
+=======
+guid: cfdba01d993f76b4386229a07e855793
+timeCreated: 1467788588
+>>>>>>> Reset Branches:Paper Boat Unity/Assets/SDKBOX/sdkbox/Editor/Sdkbox.dll.meta
+licenseType: Free
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
