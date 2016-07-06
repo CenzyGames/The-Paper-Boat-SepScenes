@@ -118,6 +118,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
 <<<<<<< HEAD
+<<<<<<< HEAD
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
@@ -134,12 +135,25 @@
  <HintPath>E:/GIT/The paper boat/Paper Boat Unity/Assets/SDKBOX/sdkbox/Editor/Sdkbox.dll</HintPath>
 >>>>>>> 977c60876a858f4a762d9222b0fb239bece70d01
 >>>>>>> 7ea9a5d22a3a80ce97dda380bb5e27ca7595d1ae
+=======
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="JarResolverLib">
+ <HintPath>F:/Cenzy/Paper_Boat/Paper Boat Scene separated/The Paper Boat SepScene/Paper Boat Unity/Assets/GooglePlayGames/Editor/JarResolverLib.dll</HintPath>
+>>>>>>> parent of 977c608... enviroment menu, Slips, Snow, Menu, Instruction
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+<<<<<<< HEAD
+=======
+ </Reference>
+ <Reference Include="Sdkbox">
+ <HintPath>F:/Cenzy/Paper_Boat/Paper Boat Scene separated/The Paper Boat SepScene/Paper Boat Unity/Assets/SDKBOX/sdkbox/Editor/Sdkbox.dll</HintPath>
+>>>>>>> parent of 977c608... enviroment menu, Slips, Snow, Menu, Instruction
  </Reference>
   </ItemGroup>
   <ItemGroup>

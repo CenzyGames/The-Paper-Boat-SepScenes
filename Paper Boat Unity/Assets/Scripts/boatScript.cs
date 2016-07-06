@@ -54,7 +54,10 @@ public class boatScript : MonoBehaviour
 	IEnumerator scoreAdd()
 	{
 		yield return new WaitForSeconds (1);
-		canvas.GetComponent<uiScript> ().score++;	
+		if (PlayerPrefs.GetInt ("Instruct63") == 0) {
+			canvas.GetComponent<uiScript> ().score++;
+		}
+			
 		StartCoroutine ("scoreAdd");
 	}
 
@@ -97,34 +100,32 @@ public class boatScript : MonoBehaviour
 			/*game over condition*/
 			if (transform.position.x < 1.8f)
      	   {
-				GameOver ();
-			}
-		}
-	}
+				Debug.Log("Collisions - " + PlayerPrefs.GetInt("collisionCount"));
 
-	void GameOver ()
-	{
-		canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").gameObject.SetActive(true);				// RC ---- canvas.transform.FindChild("GameMenus").gameObject.SetActive(true);
-		canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").transform.FindChild("Slips").gameObject.SetActive(true);
+					canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").gameObject.SetActive(true);				// RC ---- canvas.transform.FindChild("GameMenus").gameObject.SetActive(true);
+					canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").transform.FindChild("Slips").gameObject.SetActive(true);
+
+					if(PlayerPrefs.GetString("ReviveByAds") == "False")
+					{
+						canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").FindChild("showAd").gameObject.SetActive(false);
+						canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").FindChild("NoInternet").gameObject.SetActive(false);
+					}
+					canvas.GetComponent<uiScript>().checkSlips(reviveCount*100);//slips deducted
+					reviveCount *= 2;
+					PlayerPrefs.SetString("gameRunning","false");		//RC --- !!
+					Time.timeScale = 0;
+				if (reviveMenu != null && PlayerPrefs.GetString ("ReviveByAds") == "False") 
+				{
+					reviveMenu.transform.FindChild ("Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 4) * 100 + "";
+					reviveMenu.transform.FindChild ("No Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 4) * 100 + "";
+				} 
+				else 
+				{
+					reviveMenu.transform.FindChild ("Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 2) * 100 + "";
+					reviveMenu.transform.FindChild ("No Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 2) * 100 + "";
+				}
+      	  }
 		
-		if(PlayerPrefs.GetString("ReviveByAds") == "False")
-		{
-			canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").FindChild("showAd").gameObject.SetActive(false);
-			canvas.transform.FindChild("GameMenus").transform.FindChild("Revive_Menu").FindChild("NoInternet").gameObject.SetActive(false);
-		}
-		canvas.GetComponent<uiScript>().checkSlips(reviveCount*100);//slips deducted
-		reviveCount *= 2;
-		PlayerPrefs.SetString("gameRunning","false");		//RC --- !!
-		Time.timeScale = 0;
-		if (reviveMenu != null && PlayerPrefs.GetString ("ReviveByAds") == "False") 
-		{
-			reviveMenu.transform.FindChild ("Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 4) * 100 + "";
-			reviveMenu.transform.FindChild ("No Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 4) * 100 + "";
-		} 
-		else 
-		{
-			reviveMenu.transform.FindChild ("Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 2) * 100 + "";
-			reviveMenu.transform.FindChild ("No Slips").gameObject.transform.FindChild ("Text").GetComponent<Text> ().text = " " + (reviveCount / 2) * 100 + "";
 		}
 	}
 		
@@ -138,7 +139,8 @@ public class boatScript : MonoBehaviour
 			pCol.gameObject.transform.GetChild(0).gameObject.SetActive(true);
 			Destroy(pCol.gameObject);
             canvas.GetComponent<uiScript>().addSlips();
-			Instantiate( particleSystem, gameObject.transform.position,Quaternion.identity);			//Play animation of slip------------------------------RC
+			//Play animation of slip------------------------------RC
+			Instantiate( particleSystem, gameObject.transform.position,Quaternion.identity);
         }
 
 		if(pCol.gameObject.tag == "duck")
@@ -161,11 +163,9 @@ public class boatScript : MonoBehaviour
 			isCollided = true;
 			PlayerPrefs.SetString("isCollided",isCollided+"");	/// RC --- to set to true 
 		}
-	
-		if(pCol.gameObject.tag == "Boundary")
+		if(pCol.gameObject.tag == "left")
 		{
-			Debug.Log("Boat is out");
-			GameOver ();
+			Debug.Log("Collided with Left wall");
 		}
 
     }

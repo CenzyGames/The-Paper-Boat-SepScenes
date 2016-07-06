@@ -623,7 +623,7 @@ public class uiScript : MonoBehaviour {
 		boatSpawnIndex = PlayerPrefs.GetInt ("BoatNumber");
 		if(Application.loadedLevelName == "GamePlay")
 			playGame(boatSpawnIndex);
-		if(EnvironmentConfirmationMenu!=null)
+
 		EnvironmentConfirmationMenu.gameObject.SetActive(false);
     }
 
@@ -706,7 +706,7 @@ public class uiScript : MonoBehaviour {
 
 		//LOAD THE BOAT SPAWNINDEX FROM PLAYERPREFS TO INITIALIZE THE BOAT BUY
         
-		Instantiate(boats[boatSpawnIndex], new Vector3(2.7f, 0.0f, -0.91f), Quaternion.identity);
+		Instantiate(boats[boatSpawnIndex], new Vector3(2.7f, 0.05f, -0.91f), Quaternion.identity);
 
     }
 	public void BackHardwareKeyPressed()
@@ -880,12 +880,10 @@ public class uiScript : MonoBehaviour {
 
 	public void ShowPauseMenu()	//-- Show pause menu
 	{
-		if(gameMenu!=null)
 		gameMenu.transform.FindChild("Pause_Menu").gameObject.SetActive(true);
 	}
 	public void HidePauseMenu() //-- Hide pause menu
 	{
-		if(gameMenu!=null)
 		gameMenu.transform.FindChild("Pause_Menu").gameObject.SetActive(false);
 	}
 
@@ -914,12 +912,12 @@ public class uiScript : MonoBehaviour {
 		case 6: distanceXMultiplier.text = score.ToString () + " X 7" +  " = " + score*boatMultiplier[6] ; CheckHighScore(score, boatMultiplier[6] );break;
 		default: distanceXMultiplier.text = score.ToString () + " X 1" +  " = " + score*boatMultiplier[7] ; CheckHighScore(score, boatMultiplier[0] );break;
 		}
-//
-//		if (score ==2) 
-//		{
-//			GameObject.Find ("enemyManager").GetComponent<enemyManagerScript> ().InitiateSpawn ();
-//			score = 3;
-//		}
+
+		if (score ==2) 
+		{
+			GameObject.Find ("enemyManager").GetComponent<enemyManagerScript> ().InitiateSpawn ();
+			score = 3;
+		}
 	}
 
 	void CheckHighScore(int score , float multiplier)			///--- RC --- To check high score and save it in "HIGHSCORE"
@@ -1061,25 +1059,17 @@ public class uiScript : MonoBehaviour {
 	}
 	public void ShowEnvironmentMenu()
 	{
-		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(false);
-		ui.transform.FindChild("Environment Confirmation_Menu").gameObject.SetActive(true);
-
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(true);
+		ui.transform.FindChild("Shop_Menu").gameObject.SetActive(false);
 		
 	}
-	public void HideEnvironmentMenu(int environment)
+	public void HideEnvironmentMenu()
 	{
-		if(environment == 0 || environment == 1)
-		{
-		PlayerPrefs.SetInt ("environment", environment);
-		}
-		else
-		{
-			PlayerPrefs.SetInt ("environment", PlayerPrefs.GetInt("environment"));		// for 2 in inspector
-		}
-			ui.transform.FindChild("Environment_Menu").gameObject.SetActive(true);
-		ui.transform.FindChild("Environment Confirmation_Menu").gameObject.SetActive(false);
-	
+		ui.transform.FindChild("Environment_Menu").gameObject.SetActive(false);
+		ui.transform.FindChild("Shop_Menu").gameObject.SetActive(true);
+
 	}
+	
 
 	
 }
