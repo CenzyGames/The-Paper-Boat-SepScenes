@@ -93,6 +93,7 @@ public class uiScript : MonoBehaviour {
         
 		/*get slips value from registry*/
 		slips = PlayerPrefs.GetInt("slips", 0);
+		if(slipText!=null)
 		slipText.text = " " + slips.ToString ();
         
 		/*sets up camera for ui*/
@@ -238,28 +239,28 @@ public class uiScript : MonoBehaviour {
         moveTo = new Vector3(xVal, moveTo.y, moveTo.z);/*sets the destinantion of camera in UI*/
     }
 
-	public void gotoPanelBoatMenu(int xVal)
-	{
-		switch(xVal)
-		{
-		case 0: if(CheckSlipsValue(boatPrice[0])){	//gotoPanel(17.93f); 
-				ShowConfirmationMenu();}break;
-		case 1: if(CheckSlipsValue(boatPrice[1])){	//gotoPanel(17.93f); 
-				ShowConfirmationMenu();}break;
-		case 2: if(CheckSlipsValue(boatPrice[2])){	//gotoPanel(17.93f);
-				ShowConfirmationMenu();}break;
-		case 3: if(CheckSlipsValue(boatPrice[3])){	//gotoPanel(17.93f);
-				ShowConfirmationMenu();}break;
-		case 4: if(CheckSlipsValue(boatPrice[4])){	//gotoPanel(17.93f);
-				ShowConfirmationMenu();}break;
-		case 5: if(CheckSlipsValue(boatPrice[5])){	//gotoPanel(17.93f);
-				ShowConfirmationMenu();}break;
-		case 6: if(CheckSlipsValue(boatPrice[6])){	//gotoPanel(17.93f);
-				ShowConfirmationMenu();}break;
-			default : break;
-		} 
-			
-	}
+//	public void gotoPanelBoatMenu(int xVal)
+//	{
+//		switch(xVal)
+//		{
+//		case 0: if(CheckSlipsValue(boatPrice[0])){	//gotoPanel(17.93f); 
+//				ShowConfirmationMenu();}break;
+//		case 1: if(CheckSlipsValue(boatPrice[1])){	//gotoPanel(17.93f); 
+//				ShowConfirmationMenu();}break;
+//		case 2: if(CheckSlipsValue(boatPrice[2])){	//gotoPanel(17.93f);
+//				ShowConfirmationMenu();}break;
+//		case 3: if(CheckSlipsValue(boatPrice[3])){	//gotoPanel(17.93f);
+//				ShowConfirmationMenu();}break;
+//		case 4: if(CheckSlipsValue(boatPrice[4])){	//gotoPanel(17.93f);
+//				ShowConfirmationMenu();}break;
+//		case 5: if(CheckSlipsValue(boatPrice[5])){	//gotoPanel(17.93f);
+//				ShowConfirmationMenu();}break;
+//		case 6: if(CheckSlipsValue(boatPrice[6])){	//gotoPanel(17.93f);
+//				ShowConfirmationMenu();}break;
+//			default : break;
+//		} 
+//			
+//	}
 
 
 	bool CheckSlipsValue(int value)
@@ -409,6 +410,7 @@ public class uiScript : MonoBehaviour {
 
 	void CheckHighScore(int score , float multiplier)			///--- RC --- To check high score and save it in "HIGHSCORE"
 	{
+		PlayerPrefs.SetString ("CurrentScore", score +  " X "  + multiplier + " = " + score * multiplier);
 		if(PlayerPrefs.GetFloat("HighScore") < score*multiplier)
 		{
 			PlayerPrefs.SetFloat("HighScore", score*multiplier);

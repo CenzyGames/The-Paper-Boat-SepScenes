@@ -242,6 +242,7 @@
      <Compile Include="Assets\SDKBOX\sdkbox\Assets\SDKBOX.cs" />
      <Compile Include="Assets\SceneManager.cs" />
      <Compile Include="Assets\Scripts\AchievementsUnlock.cs" />
+     <Compile Include="Assets\Scripts\DisplayScore.cs" />
      <Compile Include="Assets\Scripts\PrefabLightmapData.cs" />
      <Compile Include="Assets\Scripts\ballScript.cs" />
      <Compile Include="Assets\Scripts\batakhScript.cs" />
